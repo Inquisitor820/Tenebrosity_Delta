@@ -38,7 +38,7 @@ var endbox;
 var p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23;
 var pGroup;
 
-
+var obj,obj2,obj3;
 
 function preload()
 {
@@ -264,7 +264,12 @@ p23.visible= false;
  platform9 = new Ground(575,0,125,10);
  platform10 = new Ground(512,0,100,10);
  platform11 = new Ground(2450,-20,1200,120);
- 
+ obj = createSprite(-2320, -60, 10 , 500)
+ obj.visible= false;
+ obj2 = createSprite(-4025,-170,50,80)
+ obj2.visible= false;
+ obj3 = createSprite(-850, -209, 10 , 500)
+ obj3.visible= true;
 }
 
 function draw()
@@ -329,7 +334,6 @@ text("..& proceed to the end point while avoiding the 2 Gloomaxis.",-4050,-550)
 plrS = createSprite(player.x,player.y,100,1)
 plrS.shapeColor = "white";
 plrS.visible = false;
-
 Dmg()
 
 player.visible = true;
@@ -356,7 +360,18 @@ player.visible = true;
     {
         player.y = player.y+5
     }
-
+if (player.isTouching(obj))
+{
+  window.scrollTo(1500,0)
+}
+if (player.isTouching(obj2))
+{
+  window.scrollTo(-1500,0)
+}
+if (player.isTouching(obj3))
+{
+  window.scrollTo(3000,0)
+}
 LuminiGone()
 
 //player_gravityandjump
