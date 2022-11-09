@@ -269,7 +269,7 @@ p23.visible= false;
  obj2 = createSprite(-4025,-170,50,80)
  obj2.visible= false;
  obj3 = createSprite(-850, -209, 10 , 500)
- obj3.visible= true;
+ obj3.visible= false;
 }
 
 function draw()
@@ -593,6 +593,7 @@ function Dmg()
    
  }
 }
+
 
 
 
